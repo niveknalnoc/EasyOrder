@@ -1,19 +1,32 @@
 package ie.dcu.easyorderfyp;
 
-import com.google.zxing.integration.android.IntentIntegrator;
+import java.util.ArrayList;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class ScanItemsActivity extends Activity {
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
-	private String tableNumber;
+public class ScanItemsActivity extends Activity {
 	
+	private String tableNumber;
 	private Button btnScanItems;
+	private int thisRequestCode;
+	private int thisResultCode;
+	ArrayList<MenuItem> menu;
+	
+	final Activity returnActivity = this;
+	
+	private IntentResult activityResultIntent;
+	
+	// alert dialog manager
+	AlertDialogManager alert = new AlertDialogManager();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +35,7 @@ public class ScanItemsActivity extends Activity {
 		
 		Bundle b = this.getIntent().getExtras();
 		tableNumber = b.getString("tableNumber");
-		
-		Log.e("Table Number", "> " + tableNumber);
+		menu = getIntent().getParcelableArrayListExtra ("downloadedMenuItems");
 		
 		TextView tvTableNum = (TextView) findViewById(R.id.txtTableNumber);
         tvTableNum.setText("Table: " + tableNumber);
@@ -44,5 +56,21 @@ public class ScanItemsActivity extends Activity {
        });
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+	}
+
+	public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+		activityResultIntent =
+				IntentIntegrator.parseActivityResult(requestCode, resultCode, intent);
+		thisRequestCode = requestCode;
+		thisResultCode = resultCode;
+		
+	}
+	
+	private boolean validateCodeContents(String codeContents) {
+		return false;
+	}
 
 }
