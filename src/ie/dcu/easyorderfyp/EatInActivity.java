@@ -36,7 +36,7 @@ public class EatInActivity extends Activity {
     // JSON Node names
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_PRODUCTS = "items";
-    private static final String TAG_ID = "id";
+    private static final String TAG_ID = "item_id";
     private static final String TAG_ITEM_NAME = "item_name";
     private static final String TAG_PRICE = "price";
     private static final String TAG_AVAILABLE = "available";
@@ -88,7 +88,6 @@ public class EatInActivity extends Activity {
             	codeContents = activityResultIntent.getContents();
             	boolean isValidCodeScanned = validateCodeContents(codeContents);
             	if(isValidCodeScanned){
-            		// ArrayList for ListView
                     downloadedMenuItems = new ArrayList<MenuItem>();
                     // Loading products in Background Thread
                     new LoadAllItems().execute();
@@ -173,13 +172,13 @@ public class EatInActivity extends Activity {
                         JSONObject c = items.getJSONObject(i);
  
                         // storing each json item in variable
-                        String id = c.getString(TAG_ID);
-                        String name = c.getString(TAG_ITEM_NAME);
-                        Double price = c.getDouble(TAG_PRICE);
-                        int available = c.getInt(TAG_AVAILABLE);
+                        String item_id = c.getString(TAG_ID);
+                        String item_name = c.getString(TAG_ITEM_NAME);
+                        Double item_price = c.getDouble(TAG_PRICE);
+                        int item_available = c.getInt(TAG_AVAILABLE);
  
                         // storing menu items object in arraylist
-                        downloadedMenuItems.add(new MenuItem(id,name,price,available));
+                        downloadedMenuItems.add(new MenuItem(item_id,item_name,item_price,item_available));
                     }
                 } else {
                     // no menu items found ** HANDLE ERROR **
@@ -202,7 +201,7 @@ public class EatInActivity extends Activity {
             runOnUiThread(new Runnable() {
                 public void run() {
                 	if(error_flag == true) {
-                		//SEND TO A NEW ACTIVITY STATING ERROR PLEASE CONTACT STAFF
+                		//SEND TO A NEW ACTIVITY STATING ERROR PLEASE CONTACT STAFF - NO MENU IN DATABASE
                 	}else {
                 		Intent scanItemsIntent = new Intent(getApplicationContext(), ScanItemsActivity.class);
                 		scanItemsIntent.putExtra("tableNumber", codeContents.substring(1));

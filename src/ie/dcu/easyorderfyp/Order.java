@@ -8,13 +8,16 @@ public class Order implements Parcelable{
 	int tableNum;
 	String itemId;
 	String itemName;
+	String itemPrice;
 	int quantity;
+	double price;
 	
-	public Order(int a, String b, String c, int d) {
+	public Order(int a, String b, String c, int d, double e) {
 		tableNum = a;
 		itemId = b;
 		itemName = c;
 		quantity = d;
+		price = e;
 	}
 	
 	Order()
@@ -51,6 +54,14 @@ public class Order implements Parcelable{
 	public void setQuantity(int quantity) {
 		 this.quantity = quantity;
 	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	public void setItemPrice(double price) {
+		 this.price = price;
+	}
 
 	@Override
 	public int describeContents() {
@@ -64,6 +75,7 @@ public class Order implements Parcelable{
         itemId = in.readString();
         itemName = in.readString();
         quantity = in.readInt();
+        price = in.readDouble();
         // Continue doing this for the rest of your member data
     }
 
@@ -74,6 +86,7 @@ public class Order implements Parcelable{
 		dest.writeString(itemId);
 		dest.writeString(itemName);
 		dest.writeInt(quantity);
+		dest.writeDouble(price);
 	}
 	
 	public static final Parcelable.Creator<Order> CREATOR

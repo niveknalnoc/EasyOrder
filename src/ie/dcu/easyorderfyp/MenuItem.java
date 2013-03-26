@@ -28,7 +28,7 @@ public class MenuItem implements Parcelable{
 		 this.itemName = item_name;
 	}
 	
-	public String getId() {
+	public String getItemId() {
 		return itemId;
 	}
 	
@@ -89,5 +89,16 @@ public class MenuItem implements Parcelable{
              return new MenuItem[size];
          }
     };
+    
+    @Override
+    public boolean equals(Object o) {
+		MenuItem m = (MenuItem)o;
+		
+		if(!m.itemId.equals(itemId)) {
+			return false;
+		}
+		return true;
+	}
+	
 	
 }
