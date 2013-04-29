@@ -35,42 +35,41 @@ public final class R {
     public static final class id {
         public static final int Logo=0x7f080005;
         public static final int TextViewPassword=0x7f080006;
-        public static final int action_settings=0x7f080026;
-        public static final int available=0x7f080021;
-        public static final int btnEatIn=0x7f08000d;
+        public static final int action_settings=0x7f080025;
+        public static final int available=0x7f080020;
+        public static final int btnEatIn=0x7f08000e;
         public static final int btnLogin=0x7f08000b;
-        public static final int btnLogout=0x7f08000f;
+        public static final int btnLogout=0x7f080011;
+        public static final int btnPrevOrders=0x7f080010;
         public static final int btnRegister=0x7f08000c;
         public static final int btnScan=0x7f080004;
-        public static final int btnScanItem=0x7f080015;
-        public static final int btnSubmit=0x7f080016;
-        public static final int btnTakeAway=0x7f08000e;
-        public static final int copyright=0x7f080025;
+        public static final int btnScanItem=0x7f080014;
+        public static final int btnSubmit=0x7f080015;
+        public static final int btnTakeAway=0x7f08000f;
+        public static final int copyright=0x7f080024;
         public static final int editTextPassword=0x7f080007;
         public static final int editTextUsername=0x7f080009;
-        public static final int id=0x7f08001f;
-        public static final int imageView1=0x7f080011;
-        public static final int imageView2=0x7f08001e;
-        public static final int item=0x7f08001a;
-        public static final int item_name=0x7f080020;
+        public static final int id=0x7f08001e;
+        public static final int imageView1=0x7f080012;
+        public static final int imageView2=0x7f08001d;
+        public static final int item=0x7f080019;
+        public static final int item_name=0x7f08001f;
         public static final int linearLayout1=0x7f080003;
         public static final int logo=0x7f080001;
-        public static final int order_item_list_name=0x7f080023;
-        public static final int order_item_list_price=0x7f080024;
-        public static final int order_item_list_quantity=0x7f080022;
-        public static final int order_list=0x7f080017;
-        public static final int orders=0x7f080012;
-        public static final int price=0x7f080019;
-        public static final int quantity=0x7f080018;
+        public static final int order_item_list_name=0x7f080022;
+        public static final int order_item_list_price=0x7f080023;
+        public static final int order_item_list_quantity=0x7f080021;
+        public static final int order_list=0x7f080016;
+        public static final int price=0x7f080018;
+        public static final int quantity=0x7f080017;
         public static final int textView1=0x7f08000a;
-        public static final int textView2=0x7f08001d;
-        public static final int txtEatIn=0x7f080000;
-        public static final int txtHeader=0x7f080010;
+        public static final int textView2=0x7f08001c;
+        public static final int txtDineOption=0x7f080000;
+        public static final int txtHeader=0x7f08000d;
         public static final int txtMessage=0x7f080002;
-        public static final int txtName=0x7f08001b;
-        public static final int txtPin=0x7f08001c;
-        public static final int txtPreviousOrders=0x7f080013;
-        public static final int txtTableNumber=0x7f080014;
+        public static final int txtName=0x7f08001a;
+        public static final int txtPin=0x7f08001b;
+        public static final int txtTableNumber=0x7f080013;
         public static final int txtUserName=0x7f080008;
     }
     public static final class layout {
@@ -79,7 +78,7 @@ public final class R {
         public static final int activity_login=0x7f030002;
         public static final int activity_main=0x7f030003;
         public static final int activity_order_submitted=0x7f030004;
-        public static final int activity_receipt=0x7f030005;
+        public static final int activity_previous_orders=0x7f030005;
         public static final int activity_scan_item=0x7f030006;
         public static final int activity_take_away=0x7f030007;
         public static final int all_items=0x7f030008;
@@ -96,10 +95,11 @@ public final class R {
         public static final int login=0x7f070003;
         public static final int main=0x7f070004;
         public static final int order_submitted=0x7f070005;
-        public static final int receipt=0x7f070006;
-        public static final int scan_items=0x7f070007;
-        public static final int splash_screen=0x7f070008;
-        public static final int take_away=0x7f070009;
+        public static final int previous_orders=0x7f070006;
+        public static final int receipt=0x7f070007;
+        public static final int scan_items=0x7f070008;
+        public static final int splash_screen=0x7f070009;
+        public static final int take_away=0x7f07000a;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
@@ -131,6 +131,7 @@ public final class R {
         public static final int options_unregister=0x7f050013;
         public static final int order_empty_desc=0x7f050031;
         public static final int pin=0x7f050023;
+        public static final int previous_orders_txt=0x7f050037;
         public static final int quantity_dialog_title=0x7f05002d;
         public static final int register=0x7f050030;
         public static final int register_login_txt=0x7f050028;
@@ -156,6 +157,7 @@ public final class R {
          */
         public static final int title_activity_main=0x7f050018;
         public static final int title_activity_order_submitted=0x7f05001e;
+        public static final int title_activity_previous_orders=0x7f050036;
         public static final int title_activity_receipt=0x7f050032;
         public static final int title_activity_scan_items=0x7f05001d;
         public static final int title_activity_take_away=0x7f05001b;
