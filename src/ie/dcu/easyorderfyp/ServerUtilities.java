@@ -28,7 +28,7 @@ public class ServerUtilities {
      *  URL GROUP FOR TESTING WITHIN DCU 
      * 
      */
-   /* 
+   /*
     // GCM registration url
     static final String REGISTER_SERVER_URL = "http://136.206.94.243/easyorder_server/register.php"; 
     // GCM unregister url
